@@ -1,3 +1,6 @@
+// bookmark to load:
+// javascript:with(document)(head.appendChild(createElement('script')).src ='http://rawgit.com/jojoxd/CookieLang/master/CookieLanguage.js')
+
 var CookieLang = {
 	init: function(){
 		loadTranslation("en");
@@ -20,8 +23,10 @@ var CookieLang = {
 			js.setAttribute('src', url);
 			document.head.appendChild(js);
 			console.log('Loaded Language file ' + url + ', ' + id + '.');
-		}
+		},
+		
 		setTranslation: function(){
+			console.log("todo: settranslation: add all transformation code here");
 		},
 		
 		setNumberFormatters: function(){
@@ -72,3 +77,6 @@ var CookieLang = {
 		
 	},
 };
+
+// run postinit:
+CookieLang.postInit();
