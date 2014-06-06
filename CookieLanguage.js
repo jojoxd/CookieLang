@@ -3,7 +3,7 @@
 
 var CookieLang = {
 	init: function(){
-		loadTranslation("en");
+		CookieLang.loadTranslation("en");
 		setNumberFormatters();
 	},
 	
