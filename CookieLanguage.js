@@ -3,8 +3,8 @@
 
 var CookieLang = {
 	init: function(){
-		CookieLang.loadTranslation("en");
-		setNumberFormatters();
+		CookieLang.core.loadTranslation("en");
+		CookieLang.core.setNumberFormatters();
 	},
 	
 	postInit: function(){
