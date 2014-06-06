@@ -1,12 +1,18 @@
 var CookieLang = {
 	init: function(){
-		// add CookieLang to game's init
-		Game.customInit.push();
+		loadTranslation("en");
+		setNumberFormatters();
+	},
+	
+	postInit: function(){
+		// add cookielang to init
+		Game.customInit.push(CookieLang.init());
 	},
 	
 	core: {
 		loadTranslation: function(lang){
 			// copied from Game.loadMod
+			var url = "https://rawgit.com/jojoxd/CookieLang/master/lang/translation_" + lang + ".js";
 			var js=document.createElement('script');
 			var id=url.split('/');id=id[id.length-1].split('.')[0];
 			js.setAttribute('type','text/javascript');
